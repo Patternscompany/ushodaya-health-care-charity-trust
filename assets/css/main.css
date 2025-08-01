@@ -1,18 +1,12 @@
-/*
-Theme Name: Danbox
-Author: ModinaTheme
-Author URI: https://themeforest.net/user/modinatheme/
-Description: Charity & Fundraiser Html Template
-Version: 1.1.0
-*/
+
 /*CSS Table Of Content Ends Here*/
-@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 :root {
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #1A685B;
-  --theme-2: #F84D43;
+  --theme: #0294d8;
+  --theme-2:  #0294d8;
   --theme-3: #FFE145;
   --header: #202426;
   --base: #5C30FD;
@@ -199,7 +193,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Chelsea Market", system-ui;
+  font-family: "Figtree", sans-serif;
   margin: 0px;
   padding: 0;
   color: var(--header);
@@ -1668,7 +1662,7 @@ input.main-search-input::placeholder {
 }
 
 .header-4 {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -1678,7 +1672,7 @@ input.main-search-input::placeholder {
   display: none;
 }
 .header-4 .header-main .main-menu ul li a {
-  color: var(--white);
+  color: var(--theme);
 }
 @media (max-width: 1899px) {
   .header-4 .header-main .main-menu ul li .has-homemenu {
