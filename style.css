@@ -39,3 +39,98 @@ Main Style file-> assets/css/main.css
 
 
 
+.give-purchase-form-wrap {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.single-personal-info label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.single-personal-info input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+.single-personal-info input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.donate-amount-buttons span {
+  display: inline-block;
+  background: #f1f1f1;
+  padding: 10px 20px;
+  margin: 5px 10px 5px 0;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.donate-amount-buttons span.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.theme-btn {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
+
+.theme-btn:hover {
+  background-color: #d81b60;
+}
+
+.give-final-total-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .theme-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.donation-layout {
+  background-color: #f0f6fc;
+}
+
+.poster-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.qr-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qr-img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+}
