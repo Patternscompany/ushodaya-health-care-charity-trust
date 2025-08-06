@@ -134,3 +134,18 @@ Main Style file-> assets/css/main.css
   border-radius: 10px;
   border: 2px solid #e0e0e0;
 }
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.image-grid img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
