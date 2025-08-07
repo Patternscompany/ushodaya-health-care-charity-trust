@@ -149,3 +149,10 @@ Main Style file-> assets/css/main.css
   border-radius: 8px;
 }
 
+.small-donor-img {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
