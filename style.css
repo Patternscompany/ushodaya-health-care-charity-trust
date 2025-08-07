@@ -156,3 +156,6 @@ Main Style file-> assets/css/main.css
     margin: 0 auto;
     display: block;
 }
+.arrow{
+  color: black;
+}
