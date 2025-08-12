@@ -4689,6 +4689,7 @@ input.main-search-input::placeholder {
   width: 385px;
   position: relative;
   z-index: 9;
+  
 }
 .event-single-items .event-image::before {
   position: absolute;
@@ -4702,6 +4703,7 @@ input.main-search-input::placeholder {
   background: #202426;
   opacity: 0.4;
   z-index: -1;
+  
 }
 .event-single-items .event-image .event-content {
   padding: 30px;
@@ -4724,6 +4726,7 @@ input.main-search-input::placeholder {
   text-transform: capitalize;
   background-color: var(--theme);
   color: var(--white);
+  
 }
 .event-single-items .event-image .event-content .sub-content .event-date span {
   display: block;
