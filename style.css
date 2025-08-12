@@ -96,7 +96,7 @@ Main Style file-> assets/css/main.css
 }
 
 .theme-btn:hover {
-  background-color: #d81b60;
+  /* background-color: #d81b60; */
 }
 
 .give-final-total-amount {
