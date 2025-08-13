@@ -275,6 +275,88 @@ Main Style file-> assets/css/main.css
     }
 }
 
+.custom-big-btn {
+    display: inline-block;
+    height: 100px;
+    padding: 18px 40px; /* Controls height & width */
+    font-size: 18px; /* Larger text */
+    background-color: #c3c1bf; /* Example color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position:bottom;}
+
+.custom-big-btn:hover {
+    background-color: #c3c1bf;
+}
+
+.hero-image {
+    height: 100vh; /* Full screen height */
+    background-size: cover; /* Fill entire width & height */
+    background-position: center center; /* Keep center visible */
+    background-repeat: no-repeat;
+    animation: zoomInOut 10s ease-in-out infinite; /* Zoom animation */
+    display: flex;
+    align-items: center;
+}
+
+/* Zoom in/out animation */
+@keyframes zoomInOut {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%; /* Zoom in */
+    }
+    100% {
+        background-size: 100%; /* Zoom out */
+    }
+}
+
+/* Keep layout side-by-side in all views */
+.hero-image .row {
+    display: flex;
+    flex-direction: row; /* Always side-by-side */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .hero-image {
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    .hero-image .row {
+        flex-direction: row; /* Still side-by-side */
+    }
+
+    .hero-content {
+        max-width: 50%; /* Prevent text from taking full width */
+    }
+}
+
+.custom-big-btn {
+    /* display: inline-block; */
+    height: 100px;
+    padding: 18px 30px;
+    font-size: 18px;
+    background-color: #e7e2e2;
+    color: #0294d8;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: -225px;
+   
+}
+
+.custom-big-btn:hover {
+    background-color: #e7e2e2;
+}
+
 
 
 
