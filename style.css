@@ -226,3 +226,7 @@ Main Style file-> assets/css/main.css
 .hover-gallery-item:hover .hover-text {
   opacity: 1;
 }
+
+.her-img{
+  border-radius: 3%;
+}
