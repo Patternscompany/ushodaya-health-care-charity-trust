@@ -227,6 +227,21 @@ Main Style file-> assets/css/main.css
   opacity: 1;
 }
 
-.her-img{
+.hero-img{
   border-radius: 3%;
+}
+
+.top-bar a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.top-bar a:hover {
+    color: #0294d8; /* hover color */
+}
+.top-bar-left span {
+    margin-right: 8px;
+}
+.top-bar-right i {
+    font-size: 14px;
 }
