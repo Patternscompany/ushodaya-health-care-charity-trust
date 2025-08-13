@@ -245,3 +245,36 @@ Main Style file-> assets/css/main.css
 .top-bar-right i {
     font-size: 14px;
 }
+
+.hero-image {
+    height: 100vh; /* Full screen height */
+    background-size: cover; /* Fill entire width & height */
+    background-position: center center; /* Keep center visible */
+    background-repeat: no-repeat;
+    animation: zoomInOut 10s ease-in-out infinite; /* Add animation */
+}
+
+/* Zoom in/out animation */
+@keyframes zoomInOut {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%; /* Zoom in */
+    }
+    100% {
+        background-size: 100%; /* Zoom out */
+    }
+}
+
+/* Mobile view fix */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 100vh; /* Still full height */
+        background-position: top center; /* Shift focus for mobile if needed */
+    }
+}
+
+
+
+
