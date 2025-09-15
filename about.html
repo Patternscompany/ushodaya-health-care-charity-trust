@@ -290,7 +290,7 @@
     </div>
 
     <!--<< Breadcrumb Section Start >>-->
-    <div class="breadcrumb-wrapper section-padding bg-cover"
+    <!-- <div class="breadcrumb-wrapper section-padding bg-cover"
         style="background-image: url('assets/img/banner-image.png');">
         <div class="container">
             <div class="page-heading">
@@ -313,7 +313,35 @@
                 </ul>
             </div>
         </div>
+    </div> -->
+    <div class="breadcrumb-wrapper section-padding bg-cover" style="position: relative; overflow: hidden;">
+
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; 
+        width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="assets/img/video/ushodaya.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="container">
+            <div class="page-heading">
+                <div class="breadcrumb-sub-title">
+                    <h1> At Ushodaya, no one is denied <br> care for lack of money</h1>
+                    <!-- At Ushodaya no person is denied treatment for not being able to pay -->
+                    <!-- <h5 class="wow fadeInUp">At Ushodaya no person is denied treatment for not being able to pay</h5> -->
+                    <!-- <h1 class="wow fadeInUp" data-wow-delay=".3s">About Us</h1> -->
+                </div>
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li><i class="fal fa-minus"></i></li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+        </div>
     </div>
+
 
     <!-- About Section Start -->
     <section class="about-section-3 fix section-padding">
@@ -349,9 +377,10 @@
                             <div class="section-title">
                                 <span class="sub-title color-2 wow fadeInUp"><i class="fas fa-eye"></i>About Us</span>
                                 <h2 class="mt-char-animation">
-                                    Give Hope.<span class="count">Give Light</span>
-                                    Give Today.
+                                    Where Service meets sight.<span class="count">Care Meets Community</span>
                                 </h2>
+
+                                <!-- Where service meets sight, and care meets community -->
                             </div>
                             <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
                                 Ushodaya Health Care Charity Trust has been dedicated to providing free and affordable
@@ -361,12 +390,15 @@
                             </p>
                             <div class="d-flex align-items-center flex-wrap mb-5">
                                 <ul class="checked-list wow fadeInUp" data-wow-delay=".3s">
-                                    <li><i class="far fa-check"></i>Free Eye Checkups & Surgeries</li>
-                                    <li><i class="far fa-check"></i> Rural & School Vision Camps</li>
+                                    <h5 class="mt-char-animation">
+                                        <span style="color: #0294d8;" class="count">Free camps 2013- 2025</span>
+                                    </h5>
+                                    <li><i class="far fa-check"></i>No of school children screened: 4,76,553</li>
+                                    <li><i class="far fa-check"></i>No of community patients screened: 2,54,140.</li>
+                                    <li><i class="far fa-check"></i>No of company employees screened: 39,205</li>
+                                    <li><i class="far fa-check"></i>Free glasses provided: 18,237</li>
+                                    <li><i class="far fa-check"></i>Free surgeries performed: 7821</li>
 
-
-                                    <li><i class="far fa-check"></i> Supported by Donors & Volunteers</li>
-                                    <li><i class="far fa-check"></i> Vision Awareness Programs</li>
                                 </ul>
                             </div>
                             <!-- <a href="causes.html" class="theme-btn wow fadeInUp" data-wow-delay=".7s">Learn More</a> -->
@@ -376,10 +408,65 @@
             </div>
         </div>
     </section>
+       <div class="section-title text-center">
+                <span class="sub-title color-2 wow fadeInUp"><i class=""></i>From Then To Now </span>
+                <!-- <h3 class="mt-char-animation">
+                    A world where no one lives in darkness due to lack of access to eye care <span
+                        class="color-2"></span> <br>
+                    <span></span>
+                </h3> -->
+                <p class="mt-char-animation mt-10">
+                   Ushodaya was founded in November 2016 with a vision to eliminate preventable blindness and ensure equitable access to quality eye care, particularly in underserved rural and semi-urban communities.
+                </p>
+                 <p class="mt-char-animation mt-10">
+                   Over the last 12 years, our initiatives have reached 476,553 schoolchildren, screened 254,140 community members, provided 18,237 free spectacles, and conducted 7,821 free surgeries.
+                </p>
+            </div>
+    
+
+
+    <div class="image-grid mt-0">
+        <img src="./assets/about-section-img-1.jpg" alt="Image 1" />
+        <img src="./assets/about-section-img2.png" alt="Image 2" />
+        <img src="./assets/about-section-img3.png" alt="Image 3" />
+        <img src="./assets/about-section-img4.png" alt="Image 4" />
+    </div>
+
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns by default */
+            gap: 15px;
+            /* space between images */
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 300px;
+            /* same height */
+            object-fit: cover;
+            /* crop neatly */
+            border-radius: 8px;
+        }
+
+        /* ✅ Mobile Responsive */
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+                /* 1 column on tablets & mobiles */
+            }
+
+            .image-grid img {
+                height: auto;
+                /* let images adjust naturally */
+            }
+        }
+    </style>
 
     <!-- Cta Video Section Start -->
-    <section class="cta-video-section-2 fix section-padding bg-cover">
-        <!-- Background Video -->
+    <!-- <section class="cta-video-section-2 fix section-padding bg-cover">
+        
         <video autoplay muted loop playsinline class="background-video">
             <source src="assets/img/video/ushodaya.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -397,7 +484,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <style>
         .cta-video-section-2 {
@@ -425,19 +512,38 @@
 
         <div class="container">
 
-            <div class="section-title text-center">
+            <!-- <div class="section-title text-center">
                 <span class="sub-title color-2 wow fadeInUp"><i class="fas fa-eye"></i>Our Vision</span>
                 <h3 class="mt-char-animation">
-                    A world where no one lives in darkness due to lack of access to eye care <span
+                       Bringing Quality Eye Care to Everyone, Especially Rural and Semi-Urban Communities <span
                         class="color-2"></span> <br>
                     <span></span>
                 </h3>
                 <p class="mt-char-animation mt-10">
-                    We envision a future where every individual has access to timely, affordable, and quality eye care
-                    services, and no one suffers from preventable or treatable blindness — especially in the underserved
-                    sections of society.
+                   Eliminate preventable blindness and provide quality eye care to every individual, with a focus on underserved rural and semi-urban communities
                 </p>
-            </div>
+            </div> -->
+            <div class="section-title text-center">
+    <span class="sub-title color-2 wow fadeInUp">
+        <i class="fas fa-eye"></i> Our Vision
+    </span>
+    
+    <h3 class="mt-char-animation">
+        Bringing Quality Eye Care to Everyone, Especially Rural and Semi-Urban Communities 
+        <span class="color-2"></span> <br>
+        <span></span>
+    </h3>
+    
+    <p class="mt-char-animation mt-10">
+        Eliminate preventable blindness and provide quality eye care to every individual, with a focus on underserved rural and semi-urban communities
+    </p>
+
+    <!-- Responsive Professional Image -->
+    <div class="vision-image mt-4">
+        <img style="height: 300px; width: 500px;" src="assets/vision-img.png" alt="Eye Care Vision" class="img-fluid rounded shadow">
+    </div>
+</div>
+
 
             <!-- <div class="row">
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
@@ -469,28 +575,35 @@
                 <ul class="list-unstyled">
                     <li class="mb-2">
                         <i class="fas fa-check-circle text-primary me-2"></i>
-                        To provide <strong>free and affordable eye care</strong> including vision screenings, cataract
-                        surgeries, and spectacles for the underprivileged.
+                        Provide <strong>free eye screenings, sight-restoring surgery,</strong> and tele-health care in
+                        underserved villages, schools, and semi-urban areas.
                     </li>
                     <li class="mb-2">
                         <i class="fas fa-check-circle text-primary me-2"></i>
-                        To organize <strong>regular outreach programs and eye camps</strong> in villages, tribal areas,
-                        and urban slums.
+                        Raise awareness of <strong>eye health</strong> and ensure early detection, treatment, and
+                        follow-up for vision problems.
                     </li>
                     <li class="mb-2">
+                        <i class="fas fa-check-circle text-primary me-2"></i>
+                        Build sustainable partnerships with <strong>donors, professionals, and institutions</strong> to
+                        scale affordable and equitable eye care services.
+                    </li>
+
+
+                    <!-- <li class="mb-2">
                         <i class="fas fa-check-circle text-primary me-2"></i>
                         To raise <strong>awareness about eye health</strong>, early detection, and preventive measures.
-                    </li>
-                    <li class="mb-2">
+                    </li> -->
+                    <!-- <li class="mb-2">
                         <i class="fas fa-check-circle text-primary me-2"></i>
                         To collaborate with <strong>hospitals, specialists, donors, and volunteers</strong> to extend
                         our reach and improve the quality of care.
-                    </li>
-                    <li class="mb-2">
+                    </li> -->
+                    <!-- <li class="mb-2">
                         <i class="fas fa-check-circle text-primary me-2"></i>
                         To empower <strong>communities through education and access to better vision</strong>, leading
                         to improved quality of life and productivity.
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -759,7 +872,8 @@
             <div class="container">
                 <div class="footer-wrapper text-center">
                     <p class="wow fadeInUp" data-wow-delay=".3s">
-                        © 2025 Ushodaya Charity Trust by <a href="https://thepatternscompany.com/">The Patterns Company</a>. All Rights Reserved.
+                        © 2025 Ushodaya Charity Trust by <a href="https://thepatternscompany.com/">The Patterns
+                            Company</a>. All Rights Reserved.
                     </p>
                 </div>
             </div>
