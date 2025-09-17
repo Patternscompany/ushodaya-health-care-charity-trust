@@ -421,18 +421,102 @@ Main Style file-> assets/css/main.css
   background: #0294d8;
   border: none;
   color: #fff;
-  padding: 10px;
-  width: 100%;
+  padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  margin-top: 10px;
+  margin: 10px auto 0; /* auto will center */
+  display: block;      /* makes auto-margin work */
+  text-align: center;
 }
+
+
 
 .donate-btn:hover {
   background: #0b5ed7;
 }
+.donation-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#0294d8;
+}
 
+.view-more-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
 
+.view-more-btn {
+  padding: 12px 30px;
+  background-color: #0294d8;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
+.view-more-btn:hover {
+  background-color: #0277b5;
+}
 
+.impact-section {
+  background: #f4fafa;
+  padding: 50px 20px;
+}
+
+.impact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.impact-text {
+  flex: 1;
+}
+
+.impact-text h2 {
+  color: #0294d8;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.impact-text p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.donate-btn {
+  background: #01738b;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #02566a;
+}
+
+.impact-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.impact-images img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
