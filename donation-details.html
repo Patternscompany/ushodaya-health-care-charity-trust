@@ -530,9 +530,14 @@
                                                                 Donation:</strong></div>
                                                         <div class="give-final-total-amount"><span>₹</span><span
                                                                 id="totalAmount">0</span></div>
-                                                        <button type="submit" class="theme-btn mt-3 mt-md-0">
+                                                        <!-- <button type="submit" class="theme-btn mt-3 mt-md-0">
+                                                            <i class="fas fa-hand-holding-heart"></i> Donate Now
+                                                        </button> -->
+                                                        <button type="button" id="donateBtn"
+                                                            class="theme-btn mt-3 mt-md-0">
                                                             <i class="fas fa-hand-holding-heart"></i> Donate Now
                                                         </button>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -547,6 +552,37 @@
             </div>
         </div>
     </div>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const totalAmountSpan = document.getElementById("totalAmount");
+    const donateButton = document.getElementById("donateBtn");
+
+    donateButton.addEventListener("click", function () {
+      let amount = parseInt(totalAmountSpan.innerText) || 0;
+
+      if (amount <= 0) {
+        alert("Please select or enter an amount before donating");
+        return;
+      }
+
+      // ✅ Your UPI ID and Name
+      const upiId = "8688860223@ybl";
+      const payeeName = "Kardam Kumar";
+
+      // 🔹 PhonePe-compatible UPI deep link
+      const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(
+        payeeName
+      )}&am=${amount}&cu=INR`;
+
+      // ✅ Open PhonePe / Google Pay / Paytm
+      window.location.href = upiLink;
+    });
+  });
+</script>
+
+
+
 
     <!-- Footer Section Start -->
     <footer class="footer-section footer-bg">
@@ -637,7 +673,8 @@
             <div class="container">
                 <div class="footer-wrapper text-center">
                     <p class="wow fadeInUp" data-wow-delay=".3s">
-                        © 2025 Ushodaya Charity Trust by <a href="https://thepatternscompany.com/">The Patterns Company</a>. All Rights Reserved.
+                        © 2025 Ushodaya Charity Trust by <a href="https://thepatternscompany.com/">The Patterns
+                            Company</a>. All Rights Reserved.
                     </p>
                 </div>
             </div>
@@ -672,6 +709,63 @@
     <script src="assets/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const amountButtons = document.querySelectorAll("#amountButtons span");
+            const customAmountDiv = document.getElementById("customAmountDiv");
+            const customAmountInput = document.getElementById("customAmount");
+            const totalAmountSpan = document.getElementById("totalAmount");
+            const donateButton = document.querySelector(".theme-btn");
+
+            let selectedAmount = 0;
+
+            // Handle amount selection
+            amountButtons.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    amountButtons.forEach((b) => b.classList.remove("active"));
+                    this.classList.add("active");
+
+                    if (this.dataset.value === "custom") {
+                        customAmountDiv.style.display = "block";
+                        selectedAmount = 0;
+                        totalAmountSpan.innerText = "0";
+                    } else {
+                        customAmountDiv.style.display = "none";
+                        selectedAmount = parseInt(this.dataset.value);
+                        totalAmountSpan.innerText = selectedAmount;
+                    }
+                });
+            });
+
+            // Handle custom input
+            customAmountInput.addEventListener("input", function () {
+                selectedAmount = parseInt(this.value) || 0;
+                totalAmountSpan.innerText = selectedAmount;
+            });
+
+            // Handle Donate Now click
+            donateButton.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                if (selectedAmount <= 0) {
+                    alert("Please select or enter an amount");
+                    return;
+                }
+
+                // ✅ Your UPI ID and Name
+                const upiId = "8688860223@ybl";
+                const payeeName = "Kardam Kumar";
+
+                // Create UPI Link
+                const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${selectedAmount}&cu=INR`;
+
+                // Redirect user to UPI app (works on mobile)
+                window.location.href = upiLink;
+            });
+        });
+    </script>
+
 
     <script>
         const amountButtons = document.querySelectorAll("#amountButtons span");
