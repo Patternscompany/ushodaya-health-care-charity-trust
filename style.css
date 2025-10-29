@@ -242,7 +242,7 @@
 
 .custom-big-btn {
     display: inline-block;
-    height: 100px;
+    /* height: 100px; */
     padding: 18px 40px; /* Controls height & width */
     font-size: 18px; /* Larger text */
     background-color: #c3c1bf; /* Example color */
