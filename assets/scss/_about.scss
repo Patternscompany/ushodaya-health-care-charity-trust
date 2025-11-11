@@ -289,7 +289,7 @@
 .about-wrapper-3 {
     .about-image-items-2 {
         .about-image {
-            height: 502px;
+            height: auto;
 
             @include breakpoint (max-md){
                 height: 450px;
