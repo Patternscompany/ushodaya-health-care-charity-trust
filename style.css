@@ -244,13 +244,15 @@
     display: inline-block;
     /* height: 100px; */
     padding: 18px 40px; /* Controls height & width */
-    font-size: 18px; /* Larger text */
+    font-size: 25px !important; /* Larger text */
     background-color: #c3c1bf; /* Example color */
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
-    position:bottom;}
+    position:bottom;
+    font-weight:bold;
+  }
 
 .custom-big-btn:hover {
     background-color: #c3c1bf;
