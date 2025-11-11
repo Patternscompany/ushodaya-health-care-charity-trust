@@ -1693,7 +1693,7 @@ input.main-search-input::placeholder {
   top: 0 !important;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 999;
   transition: all 0.9s;
   background-color: var(--white);
   box-shadow: var(---box-shadow);
