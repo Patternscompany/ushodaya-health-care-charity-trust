@@ -301,41 +301,6 @@
                 },
             });
         }
-        if($('.blog-slider-2').length > 0) {
-            const causesSlider2 = new Swiper(".blog-slider-2", {
-                spaceBetween: 30,
-                speed: 2000,
-                loop: true,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: ".array-prev",
-                    prevEl: ".array-next",
-                },
-                breakpoints: {
-                    1399: {
-                        slidesPerView: 1,
-                    },
-                    1199: {
-                        slidesPerView: 1,
-                    },
-                    991: {
-                        slidesPerView: 1,
-                    },
-                    767: {
-                        slidesPerView: 1,
-                    },
-                    575: {
-                        slidesPerView: 1,
-                    },
-                    0: {
-                        slidesPerView: 1,
-                    },
-                },
-            });
-        }
 
         //>> testimonial Slider Start <<//
         if($('.testimonial-swiper').length > 0) {
