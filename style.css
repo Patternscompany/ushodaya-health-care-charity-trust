@@ -344,7 +344,7 @@
 
 .progress-wrap {
   position: relative;
-  background: #ddd;
+  /* background: #ddd; */
   height: 8px;
   border-radius: 5px;
   margin: 10px 15px;
