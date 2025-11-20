@@ -89,22 +89,22 @@
         //>> Banner Animation <<//
 
         //>> Hero-3 Slider Start <<//
-        const sliderActive1 = ".hero-slider-2";
-        const sliderInit1 = new Swiper(sliderActive1, {
-            loop: true,
-            slidesPerView: 1,
-            effect: "fade",
-            speed: 2000,
-            autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".dot",
-                clickable: true,
-            },
-            
-        });
+       const sliderActive1 = ".hero-slider-2";
+const sliderInit1 = new Swiper(sliderActive1, {
+    loop: true,
+    slidesPerView: 1,
+    effect: "fade",
+    speed: 1500, // fade animation speed (slower)
+    autoplay: {
+        delay: 7000, // wait 7 seconds before next slide
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".dot",
+        clickable: true,
+    },
+});
+
         // content animation when active start here
         function animated_swiper(selector, init) {
              let animated = function animated() {
