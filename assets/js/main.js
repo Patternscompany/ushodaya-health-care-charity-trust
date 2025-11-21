@@ -236,6 +236,38 @@ const sliderInit1 = new Swiper(sliderActive1, {
                 },
             });
         }
+        if($('.blog-slider-2').length > 0) {
+            const eventSlider = new Swiper(".blog-slider-2", {
+                spaceBetween: 0,
+                speed: 3000,
+                loop: true,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    1399: {
+                        slidesPerView: 1,
+                    },
+                    1199: {
+                        slidesPerView: 1,
+                    },
+                    991: {
+                        slidesPerView: 1,
+                    },
+                    767: {
+                        slidesPerView: 1,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
 
         if($('.causes-slider').length > 0) {
             const causesSlider = new Swiper(".causes-slider", {
