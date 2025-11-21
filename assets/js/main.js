@@ -268,6 +268,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
                 },
             });
         }
+       
 
         if($('.causes-slider').length > 0) {
             const causesSlider = new Swiper(".causes-slider", {
@@ -373,6 +374,34 @@ const sliderInit1 = new Swiper(sliderActive1, {
                 },
             });
         }
+      if ($('.img-carousel-1').length > 0) {
+    const imgCarousel = new Swiper(".img-carousel-1", {
+        spaceBetween: 0,
+        speed: 2000,
+        loop: true,
+        centeredSlides: true,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".dot",
+            clickable: true,
+        },
+        breakpoints: {
+            1199: { slidesPerView: 2 },
+            991:  { slidesPerView: 2 },
+            767:  { slidesPerView: 1 },
+            575:  { slidesPerView: 1 },
+            0:    { slidesPerView: 1 },
+        },
+    });
+}
+
 
         if($('.testimonial-swiper-2').length > 0) {
             const testimonialSwiper2 = new Swiper(".testimonial-swiper-2", {
