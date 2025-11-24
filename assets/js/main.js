@@ -401,6 +401,33 @@ const sliderInit1 = new Swiper(sliderActive1, {
         },
     });
 }
+      if ($('.free-carousel').length > 0) {
+    const imgCarousel = new Swiper(".free-carousel", {
+        spaceBetween: 0,
+        speed: 2000,
+        loop: true,
+        centeredSlides: true,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".dot",
+            clickable: true,
+        },
+        breakpoints: {
+            1199: { slidesPerView: 1 },
+            991:  { slidesPerView: 1 },
+            767:  { slidesPerView: 1 },
+            575:  { slidesPerView: 1 },
+            0:    { slidesPerView: 1 },
+        },
+    });
+}
 
 
         if($('.testimonial-swiper-2').length > 0) {
