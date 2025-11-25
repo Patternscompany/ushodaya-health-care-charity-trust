@@ -1724,6 +1724,12 @@ input.main-search-input::placeholder {
 .header-logo img,.header-logo-2 img{
 width:192px;
 }
+.offcanvas__logo img{
+  width:192px;
+}
+.widget-head img{
+  width:192px;
+}
 .sticky.header-4 .header-main .main-menu ul li a {
   color: var(--header);
 }
