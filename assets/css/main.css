@@ -1721,6 +1721,9 @@ input.main-search-input::placeholder {
 .sticky.header-4 .header-logo {
   display: none;
 }
+.header-logo img,.header-logo-2 img{
+width:192px;
+}
 .sticky.header-4 .header-main .main-menu ul li a {
   color: var(--header);
 }
