@@ -3,10 +3,10 @@
     Version         : 1.0
 * ================================================================= */
 
-(function($) {
+(function ($) {
     "use strict";
 
-    $(document).ready( function() {
+    $(document).ready(function () {
 
         //>> Mobile Menu Js Start <<//
         $('#mobile-menu').meanmenu({
@@ -16,17 +16,17 @@
         });
 
         //>> Sidebar Toggle Js Start <<//
-        $(".offcanvas__close,.offcanvas__overlay").on("click", function() {
+        $(".offcanvas__close,.offcanvas__overlay").on("click", function () {
             $(".offcanvas__info").removeClass("info-open");
             $(".offcanvas__overlay").removeClass("overlay-open");
         });
-        $(".sidebar__toggle").on("click", function() {
+        $(".sidebar__toggle").on("click", function () {
             $(".offcanvas__info").addClass("info-open");
             $(".offcanvas__overlay").addClass("overlay-open");
         });
 
         //>> Body Overlay Js Start <<//
-        $(".body-overlay").on("click", function() {
+        $(".body-overlay").on("click", function () {
             $(".offcanvas__area").removeClass("offcanvas-opened");
             $(".df-search-area").removeClass("opened");;
             $(".body-overlay").removeClass("opened");
@@ -34,7 +34,7 @@
 
         //>> Sticky Header Js Start <<//
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 250) {
                 $("#header-sticky").addClass("sticky");
             } else {
@@ -89,54 +89,54 @@
         //>> Banner Animation <<//
 
         //>> Hero-3 Slider Start <<//
-       const sliderActive1 = ".hero-slider-2";
-const sliderInit1 = new Swiper(sliderActive1, {
-    loop: true,
-    slidesPerView: 1,
-    effect: "fade",
-    speed: 1500, // fade animation speed (slower)
-    autoplay: {
-        delay: 7000, // wait 7 seconds before next slide
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".dot",
-        clickable: true,
-    },
-});
+        const sliderActive1 = ".hero-slider-2";
+        const sliderInit1 = new Swiper(sliderActive1, {
+            loop: true,
+            slidesPerView: 1,
+            effect: "fade",
+            speed: 1500, // fade animation speed (slower)
+            autoplay: {
+                delay: 7000, // wait 7 seconds before next slide
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".dot",
+                clickable: true,
+            },
+        });
 
         // content animation when active start here
         function animated_swiper(selector, init) {
-             let animated = function animated() {
-                 $(selector + " [data-animation]").each(function () {
-                     let anim = $(this).data("animation");
-                     let delay = $(this).data("delay");
-                     let duration = $(this).data("duration");
-                     $(this)
-                         .removeClass("anim" + anim)
-                         .addClass(anim + " animated")
-                         .css({
-                             webkitAnimationDelay: delay,
-                             animationDelay: delay,
-                             webkitAnimationDuration: duration,
-                             animationDuration: duration,
-                         })
-                         .one("animationend", function () {
-                             $(this).removeClass(anim + " animated");
-                         });
-                 });
-             };
-             animated();
-             init.on("slideChange", function () {
-                 $(sliderActive1 + " [data-animation]").removeClass("animated");
-             });
-             init.on("slideChange", animated);
+            let animated = function animated() {
+                $(selector + " [data-animation]").each(function () {
+                    let anim = $(this).data("animation");
+                    let delay = $(this).data("delay");
+                    let duration = $(this).data("duration");
+                    $(this)
+                        .removeClass("anim" + anim)
+                        .addClass(anim + " animated")
+                        .css({
+                            webkitAnimationDelay: delay,
+                            animationDelay: delay,
+                            webkitAnimationDuration: duration,
+                            animationDuration: duration,
+                        })
+                        .one("animationend", function () {
+                            $(this).removeClass(anim + " animated");
+                        });
+                });
+            };
+            animated();
+            init.on("slideChange", function () {
+                $(sliderActive1 + " [data-animation]").removeClass("animated");
+            });
+            init.on("slideChange", animated);
         }
         animated_swiper(sliderActive1, sliderInit1);
 
         //>> Wow Animation Start <<//
         new WOW().init();
-       
+
 
         //>> Scroll Js Start <<//
         const scrollPath = document.querySelector(".scroll-up path");
@@ -147,7 +147,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
         scrollPath.getBoundingClientRect();
         scrollPath.style.transition = scrollPath.style.WebkitTransition = "stroke-dashoffset 10ms linear";
 
-        const updatescroll = function() {
+        const updatescroll = function () {
             let scrolltotal = $(window).scrollTop();
             let height = $(document).height() - $(window).height();
             let scrolltotalheight = pathLength - (scrolltotal * pathLength) / height;
@@ -159,7 +159,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
         const offset = 50;
         const duration = 950;
 
-        $(window).on("scroll", function() {
+        $(window).on("scroll", function () {
             if (jQuery(this).scrollTop() > offset) {
                 jQuery(".scroll-up").addClass("active-scroll");
             } else {
@@ -167,18 +167,18 @@ const sliderInit1 = new Swiper(sliderActive1, {
             }
         });
 
-        $(".scroll-up").on("click", function(event) {
+        $(".scroll-up").on("click", function (event) {
             event.preventDefault();
             jQuery("html, body").animate({
-                    scrollTop: 0,
-                },
+                scrollTop: 0,
+            },
                 duration
             );
             return false;
         });
 
-         //>> Video Popup Start <<//
-         $(".img-popup").magnificPopup({
+        //>> Video Popup Start <<//
+        $(".img-popup").magnificPopup({
             type: "image",
             gallery: {
                 enabled: true,
@@ -190,7 +190,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
             callbacks: {
             }
         });
-        
+
         //>> Counterup Start <<//
         $(".count").counterUp({
             delay: 15,
@@ -204,7 +204,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
         $('select').niceSelect();
 
         //>> Event Slider Start <<//
-        if($('.event-slider').length > 0) {
+        if ($('.event-slider').length > 0) {
             const eventSlider = new Swiper(".event-slider", {
                 spaceBetween: 0,
                 speed: 3000,
@@ -236,7 +236,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
                 },
             });
         }
-        if($('.blog-slider-2').length > 0) {
+        if ($('.blog-slider-2').length > 0) {
             const eventSlider = new Swiper(".blog-slider-2", {
                 spaceBetween: 0,
                 speed: 3000,
@@ -268,9 +268,9 @@ const sliderInit1 = new Swiper(sliderActive1, {
                 },
             });
         }
-       
 
-        if($('.causes-slider').length > 0) {
+
+        if ($('.causes-slider').length > 0) {
             const causesSlider = new Swiper(".causes-slider", {
                 spaceBetween: 30,
                 speed: 2000,
@@ -299,7 +299,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
             });
         }
 
-        if($('.causes-slider-2').length > 0) {
+        if ($('.causes-slider-2').length > 0) {
             const causesSlider2 = new Swiper(".causes-slider-2", {
                 spaceBetween: 30,
                 speed: 2000,
@@ -336,7 +336,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
         }
 
         //>> testimonial Slider Start <<//
-        if($('.testimonial-swiper').length > 0) {
+        if ($('.testimonial-swiper').length > 0) {
             const testimonialSwiper = new Swiper(".testimonial-swiper", {
                 spaceBetween: 20,
                 speed: 2000,
@@ -345,7 +345,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
                 slidesPerGroupSkip: 3,
                 grabCursor: true,
                 keyboard: {
-                enabled: true,
+                    enabled: true,
                 },
                 autoplay: {
                     delay: 1000,
@@ -374,63 +374,63 @@ const sliderInit1 = new Swiper(sliderActive1, {
                 },
             });
         }
-      if ($('.img-carousel-1').length > 0) {
-    const imgCarousel = new Swiper(".img-carousel-1", {
-        spaceBetween: 0,
-        speed: 2000,
-        loop: true,
-        centeredSlides: true,
-        grabCursor: true,
-        keyboard: {
-            enabled: true,
-        },
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".dot",
-            clickable: true,
-        },
-        breakpoints: {
-            1199: { slidesPerView: 2 },
-            991:  { slidesPerView: 2 },
-            767:  { slidesPerView: 1 },
-            575:  { slidesPerView: 1 },
-            0:    { slidesPerView: 1 },
-        },
-    });
-}
-      if ($('.free-carousel').length > 0) {
-    const imgCarousel = new Swiper(".free-carousel", {
-        spaceBetween: 0,
-        speed: 2000,
-        loop: true,
-        centeredSlides: true,
-        grabCursor: true,
-        keyboard: {
-            enabled: true,
-        },
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".dot",
-            clickable: true,
-        },
-        breakpoints: {
-            1199: { slidesPerView: 1 },
-            991:  { slidesPerView: 1 },
-            767:  { slidesPerView: 1 },
-            575:  { slidesPerView: 1 },
-            0:    { slidesPerView: 1 },
-        },
-    });
-}
+        if ($('.img-carousel-1').length > 0) {
+            const imgCarousel = new Swiper(".img-carousel-1", {
+                spaceBetween: 0,
+                speed: 2000,
+                loop: true,
+                centeredSlides: true,
+                grabCursor: true,
+                keyboard: {
+                    enabled: true,
+                },
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".dot",
+                    clickable: true,
+                },
+                breakpoints: {
+                    1199: { slidesPerView: 2 },
+                    991: { slidesPerView: 2 },
+                    767: { slidesPerView: 1 },
+                    575: { slidesPerView: 1 },
+                    0: { slidesPerView: 1 },
+                },
+            });
+        }
+        if ($('.free-carousel').length > 0) {
+            const imgCarousel = new Swiper(".free-carousel", {
+                spaceBetween: 0,
+                speed: 2000,
+                loop: true,
+                centeredSlides: true,
+                grabCursor: true,
+                keyboard: {
+                    enabled: true,
+                },
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".dot",
+                    clickable: true,
+                },
+                breakpoints: {
+                    1199: { slidesPerView: 2 },
+                    991: { slidesPerView: 1 },
+                    767: { slidesPerView: 1 },
+                    575: { slidesPerView: 1 },
+                    0: { slidesPerView: 1 },
+                },
+            });
+        }
 
 
-        if($('.testimonial-swiper-2').length > 0) {
+        if ($('.testimonial-swiper-2').length > 0) {
             const testimonialSwiper2 = new Swiper(".testimonial-swiper-2", {
                 spaceBetween: 20,
                 speed: 2000,
@@ -467,7 +467,7 @@ const sliderInit1 = new Swiper(sliderActive1, {
             });
         }
 
-        if($('.testimonial-swiper-3').length > 0) {
+        if ($('.testimonial-swiper-3').length > 0) {
             const testimonialSwiper3 = new Swiper(".testimonial-swiper-3", {
                 spaceBetween: 30,
                 speed: 1000,
@@ -491,86 +491,86 @@ const sliderInit1 = new Swiper(sliderActive1, {
         }
 
         // Add payment amount area start here ***
-	    $(document).on("click", ".amount-btn", function () {
-		// Remove the "active" class from all buttons
-		$(".amount-btn").removeClass("active");
+        $(document).on("click", ".amount-btn", function () {
+            // Remove the "active" class from all buttons
+            $(".amount-btn").removeClass("active");
 
-		// Add the "active" class to the clicked button
-		$(this).addClass("active");
+            // Add the "active" class to the clicked button
+            $(this).addClass("active");
 
-		// Get the text value of the clicked button
-		let buttonValue = $(this).text();
+            // Get the text value of the clicked button
+            let buttonValue = $(this).text();
 
-		// Update the value attribute of the input element
-		$(".addAmount-value").val(buttonValue);
-	});
-	// Add payment amount area end here ***
+            // Update the value attribute of the input element
+            $(".addAmount-value").val(buttonValue);
+        });
+        // Add payment amount area end here ***
 
-     //>> Search Popup Start <<//
-     const $searchWrap = $(".search-wrap");
-     const $navSearch = $(".nav-search");
-     const $searchClose = $("#search-close");
+        //>> Search Popup Start <<//
+        const $searchWrap = $(".search-wrap");
+        const $navSearch = $(".nav-search");
+        const $searchClose = $("#search-close");
 
-     $(".search-trigger").on("click", function (e) {
-         e.preventDefault();
-         $searchWrap.animate({ opacity: "toggle" }, 500);
-         $navSearch.add($searchClose).addClass("open");
-     });
+        $(".search-trigger").on("click", function (e) {
+            e.preventDefault();
+            $searchWrap.animate({ opacity: "toggle" }, 500);
+            $navSearch.add($searchClose).addClass("open");
+        });
 
-     $(".search-close").on("click", function (e) {
-         e.preventDefault();
-         $searchWrap.animate({ opacity: "toggle" }, 500);
-         $navSearch.add($searchClose).removeClass("open");
-     });
+        $(".search-close").on("click", function (e) {
+            e.preventDefault();
+            $searchWrap.animate({ opacity: "toggle" }, 500);
+            $navSearch.add($searchClose).removeClass("open");
+        });
 
-     function closeSearch() {
-         $searchWrap.fadeOut(200);
-         $navSearch.add($searchClose).removeClass("open");
-     }
+        function closeSearch() {
+            $searchWrap.fadeOut(200);
+            $navSearch.add($searchClose).removeClass("open");
+        }
 
-     $(document.body).on("click", function (e) {
-         closeSearch();
-     });
+        $(document.body).on("click", function (e) {
+            closeSearch();
+        });
 
-     $(".search-trigger, .main-search-input").on("click", function (e) {
-         e.stopPropagation();
-     });
+        $(".search-trigger, .main-search-input").on("click", function (e) {
+            e.stopPropagation();
+        });
 
 
-      // 26. mt-char-animation
-		if ($('.mt-char-animation').length > 0) {
-			let char_come = gsap.utils.toArray(".mt-char-animation");
-			char_come.forEach(splitTextLine => {
-				const tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: splitTextLine,
-					start: 'top 90%',
-					end: 'bottom 60%',
-					scrub: false,
-					markers: false,
-					toggleActions: 'play none none none'
-				}
-				});
-	
-				const itemSplitted = new SplitText(splitTextLine, { type: "chars, words" });
-				gsap.set(splitTextLine, { perspective: 300});
-				itemSplitted.split({ type: "chars, words"})
-				tl.from(itemSplitted.chars, 
-					{
-						duration: 0.5,
-						x: 100,
-						autoAlpha: 0,
-						stagger: 0.05 
-					});
-			});	
-		}
+        // 26. mt-char-animation
+        if ($('.mt-char-animation').length > 0) {
+            let char_come = gsap.utils.toArray(".mt-char-animation");
+            char_come.forEach(splitTextLine => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: splitTextLine,
+                        start: 'top 90%',
+                        end: 'bottom 60%',
+                        scrub: false,
+                        markers: false,
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                const itemSplitted = new SplitText(splitTextLine, { type: "chars, words" });
+                gsap.set(splitTextLine, { perspective: 300 });
+                itemSplitted.split({ type: "chars, words" })
+                tl.from(itemSplitted.chars,
+                    {
+                        duration: 0.5,
+                        x: 100,
+                        autoAlpha: 0,
+                        stagger: 0.05
+                    });
+            });
+        }
 
 
 
     }); // End Document Ready Function
 
     function loader() {
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             // Animate loader off screen
             $(".preloader").addClass('loaded');
             $(".preloader").delay(600).fadeOut();
@@ -578,6 +578,6 @@ const sliderInit1 = new Swiper(sliderActive1, {
     }
     loader();
 
-    
+
 })(jQuery); // End jQuery
 
