@@ -1,0 +1,15 @@
+config.php
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Other sensitive or temporary files
+.env
+vendor/
+node_modules/
