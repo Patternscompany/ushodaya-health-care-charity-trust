@@ -7474,7 +7474,7 @@ p.sticky-label {
   font-size: 36px;
   margin-bottom: 5px;
 }
-.main-contact-form-items .form-clt input, .main-contact-form-items .form-clt textarea {
+.main-contact-form-items .form-clt input, .main-contact-form-items .form-clt select, .main-contact-form-items .form-clt textarea {
   padding: 18px 30px;
   border: none;
   outline: none;
@@ -7483,6 +7483,22 @@ p.sticky-label {
   font-size: 16px;
   font-weight: 500;
   color: var(--text);
+}
+.main-contact-form-items .form-clt .nice-select {
+  background-color: var(--white);
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  padding: 18px 30px;
+  line-height: normal;
+}
+.main-contact-form-items .form-clt .nice-select .list {
+  width: 100%;
+  background-color: var(--white);
+}
+.main-contact-form-items .form-clt .nice-select::after {
+  right: 30px;
 }
 @media (max-width: 575px) {
   .main-contact-form-items .form-clt input, .main-contact-form-items .form-clt textarea {
