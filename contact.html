@@ -403,12 +403,15 @@
                                 <textarea name="message" id="message" placeholder="Write Message*"></textarea>
                             </div>
                         </div>
+                        <!-- WhatsApp / SMS / RCS Consent Checkbox -->
                         <div class="col-lg-12">
-                            <div class="form-check pb-2 mt-2">
-                                <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
-                                <label class="form-check-label" for="terms">
-                                    I accept the <a href="terms-conditions.html">Terms & Conditions</a> and <a
-                                        href="policy.html">Privacy Policy</a>
+                            <div class="consent-checkbox-wrap">
+                                <label class="consent-label" for="whatsapp_consent_form">
+                                    <input type="checkbox" id="whatsapp_consent_form" name="whatsapp_consent"
+                                        value="Yes" class="consent-input">
+                                    <span class="consent-checkmark"></span>
+                                    <span class="consent-text">I agree to receive WhatsApp, SMS &amp; RCS
+                                        messages.</span>
                                 </label>
                             </div>
                         </div>
@@ -550,6 +553,81 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+
+    <!-- ========== Fixed Consent Banner ========== -->
+    <div id="consent-banner" class="consent-banner" role="dialog" aria-live="polite" aria-label="Messaging consent">
+        <div class="consent-banner-inner">
+            <div class="consent-banner-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="consent-banner-body">
+                <p class="consent-banner-text">Stay updated! <strong>I agree to receive WhatsApp, SMS &amp; RCS
+                        messages</strong> from Ushodaya Health Care Charity Trust.</p>
+                <label class="consent-banner-label" for="whatsapp_consent_banner">
+                    <input type="checkbox" id="whatsapp_consent_banner" class="consent-input"
+                        onchange="handleBannerConsent(this)">
+                    <span class="consent-checkmark"></span>
+                    <span class="consent-text">I agree to receive WhatsApp, SMS &amp; RCS messages.</span>
+                </label>
+            </div>
+            <button class="consent-banner-close" onclick="dismissConsentBanner()" aria-label="Close consent banner">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== Consent Styles ========== -->
+    <style>
+
+    </style>
+
+    <!-- ========== Consent JS ========== -->
+    <script>
+        (function () {
+            var banner = document.getElementById('consent-banner');
+            var bannerCheckbox = document.getElementById('whatsapp_consent_banner');
+
+            // Restore saved state from localStorage (shared with home page)
+            var saved = localStorage.getItem('whatsapp_consent');
+            if (saved === 'dismissed' || saved === 'Yes') {
+                banner.classList.add('hide');
+                setTimeout(function () { banner.style.display = 'none'; }, 450);
+            }
+            if (saved === 'Yes' && bannerCheckbox) {
+                bannerCheckbox.checked = true;
+            }
+
+            // Sync form checkbox with localStorage
+            var formCb = document.getElementById('whatsapp_consent_form');
+            if (formCb && saved === 'Yes') {
+                formCb.checked = true;
+            }
+            if (formCb) {
+                formCb.addEventListener('change', function () {
+                    localStorage.setItem('whatsapp_consent', this.checked ? 'Yes' : 'No');
+                });
+            }
+        })();
+
+        function handleBannerConsent(cb) {
+            var val = cb.checked ? 'Yes' : 'No';
+            localStorage.setItem('whatsapp_consent', val);
+            var formCb = document.getElementById('whatsapp_consent_form');
+            if (formCb) formCb.checked = cb.checked;
+            if (cb.checked) { setTimeout(dismissConsentBanner, 800); }
+        }
+
+        function dismissConsentBanner() {
+            var banner = document.getElementById('consent-banner');
+            if (!banner) return;
+            banner.classList.add('hide');
+            if (!localStorage.getItem('whatsapp_consent')) {
+                localStorage.setItem('whatsapp_consent', 'dismissed');
+            }
+            setTimeout(function () { banner.style.display = 'none'; }, 450);
+        }
+    </script>
+
 </body>
 
 </html>

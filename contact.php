@@ -13,6 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject_val = $_POST['subject'] ?? '';
     $message = $_POST['message'] ?? '';
     $terms = isset($_POST['terms']) ? 'Accepted' : 'Not Accepted';
+    // WhatsApp / SMS / RCS consent — Yes if checkbox was ticked, No otherwise
+    $whatsapp_consent = (isset($_POST['whatsapp_consent']) && $_POST['whatsapp_consent'] === 'Yes') ? 'Yes' : 'No';
 
     // Create a new PHPMailer instance
     $mail = new PHPMailer(true);
@@ -69,6 +71,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <tr>
                     <td style='padding:10px; border-bottom:1px solid #eee; font-weight:bold;'>Terms Accepted :</td>
                     <td style='padding:10px; border-bottom:1px solid #eee;'>$terms</td>
+                </tr>
+                <tr>
+                    <td style='padding:10px; border-bottom:1px solid #eee; font-weight:bold;'>WhatsApp / SMS / RCS Consent :</td>
+                    <td style='padding:10px; border-bottom:1px solid #eee; font-weight:bold; color: " . ($whatsapp_consent === 'Yes' ? '#25d366' : '#e74c3c') . "'>$whatsapp_consent</td>
                 </tr>
                 <tr>
                     <td style='padding:10px; font-weight:bold;'>Message :</td>

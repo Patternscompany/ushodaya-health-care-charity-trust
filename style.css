@@ -11,17 +11,21 @@
   margin-bottom: 6px;
   color: #333;
 }
-.nabh-logo{
-  width:80px;
+
+.nabh-logo {
+  width: 80px;
 }
-.nabh-logo img{
-  width:100%;
+
+.nabh-logo img {
+  width: 100%;
 }
-@media(max-width:992px){
-  .nabh-logo{
-    width:60px;
+
+@media(max-width:992px) {
+  .nabh-logo {
+    width: 60px;
   }
 }
+
 .single-personal-info input {
   width: 100%;
   padding: 12px;
@@ -119,13 +123,14 @@
 }
 
 .small-donor-img {
-    width: 80%;
-    max-width: 200px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
-.arrow{
+
+.arrow {
   color: black;
 }
 
@@ -182,7 +187,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background:#0294d8;
+  background: #0294d8;
   color: #fff;
   text-align: center;
   padding: 8px 0;
@@ -196,67 +201,83 @@
   opacity: 1;
 }
 
-.hero-img{
+.hero-img {
   border-radius: 3%;
 }
 
 .top-bar a {
-    color: #333;
-    text-decoration: none;
-    margin-left: 10px;
+  color: #333;
+  text-decoration: none;
+  margin-left: 10px;
 }
+
 .top-bar a:hover {
-    color: #0294d8; /* hover color */
+  color: #0294d8;
+  /* hover color */
 }
+
 .top-bar-left span {
-    margin-right: 8px;
+  margin-right: 8px;
 }
+
 .top-bar-right i {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .hero-image {
-    height: 100vh; /* Full screen height */
-    background-size: cover; /* Fill entire width & height */
-    background-position: center center; /* Keep center visible */
-    background-repeat: no-repeat;
-    animation: zoomInOut 10s ease-in-out infinite; /* Add animation */
+  height: 100vh;
+  /* Full screen height */
+  background-size: cover;
+  /* Fill entire width & height */
+  background-position: center center;
+  /* Keep center visible */
+  background-repeat: no-repeat;
+  animation: zoomInOut 10s ease-in-out infinite;
+  /* Add animation */
 }
 
 /* Zoom in/out animation */
 @keyframes zoomInOut {
-    0% {
-        background-size: 100%;
-    }
-    50% {
-        background-size: 110%; /* Zoom in */
-    }
-    100% {
-        background-size: 100%; /* Zoom out */
-    }
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 110%;
+    /* Zoom in */
+  }
+
+  100% {
+    background-size: 100%;
+    /* Zoom out */
+  }
 }
 
 /* Mobile view fix */
 @media (max-width: 768px) {
-    .hero-image {
-        height: 100vh; /* Still full height */
-        background-position: top center; /* Shift focus for mobile if needed */
-    }
+  .hero-image {
+    height: 100vh;
+    /* Still full height */
+    background-position: top center;
+    /* Shift focus for mobile if needed */
+  }
 }
 
 
 
 .custom-big-btn {
-          /* distance from left */
-  background: rgba(255, 255, 255, 0.85); /* glass look */
-  color: #0077b6;        /* blue text */
+  /* distance from left */
+  background: rgba(255, 255, 255, 0.85);
+  /* glass look */
+  color: #0077b6;
+  /* blue text */
   padding: 18px 35px;
   font-size: 20px;
   font-weight: 700;
   text-align: left;
   text-decoration: none;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
   transition: all 0.3s ease;
   line-height: 1.3;
@@ -264,61 +285,74 @@
 
 .custom-big-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   color: #004f75;
 }
-@media(max-width:992px){
-  .custom-big-btn{
-    width:100%;
+
+@media(max-width:992px) {
+  .custom-big-btn {
+    width: 100%;
   }
 }
 
 .hero-image {
-    height: 100vh; /* Full screen height */
-    background-size: cover; /* Fill entire width & height */
-    background-position: center center; /* Keep center visible */
-    background-repeat: no-repeat;
-    animation: zoomInOut 10s ease-in-out infinite; /* Zoom animation */
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  /* Full screen height */
+  background-size: cover;
+  /* Fill entire width & height */
+  background-position: center center;
+  /* Keep center visible */
+  background-repeat: no-repeat;
+  animation: zoomInOut 10s ease-in-out infinite;
+  /* Zoom animation */
+  display: flex;
+  align-items: center;
 }
 
 /* Zoom in/out animation */
 @keyframes zoomInOut {
-    0% {
-        background-size: 100%;
-    }
-    50% {
-        background-size: 110%; /* Zoom in */
-    }
-    100% {
-        background-size: 100%; /* Zoom out */
-    }
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 110%;
+    /* Zoom in */
+  }
+
+  100% {
+    background-size: 100%;
+    /* Zoom out */
+  }
 }
 
 /* Keep layout side-by-side in all views */
 .hero-image .row {
-    display: flex;
-    flex-direction: row; /* Always side-by-side */
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping if needed */
+  display: flex;
+  flex-direction: row;
+  /* Always side-by-side */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Allow wrapping if needed */
 }
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {
-    .hero-image {
-        background-position: center center !important;
-        background-size: cover !important;
-    }
+  .hero-image {
+    background-position: center center !important;
+    background-size: cover !important;
+  }
 
-    .hero-image .row {
-        flex-direction: row; /* Still side-by-side */
-    }
+  .hero-image .row {
+    flex-direction: row;
+    /* Still side-by-side */
+  }
 
-    .hero-content {
-        max-width: 90%; /* Prevent text from taking full width */
-    }
+  .hero-content {
+    max-width: 90%;
+    /* Prevent text from taking full width */
+  }
 }
 
 
@@ -334,7 +368,7 @@
 .donation-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 320px;
   overflow: hidden;
   position: relative;
@@ -391,8 +425,10 @@
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  margin: 10px auto 0; /* auto will center */
-  display: block;      /* makes auto-margin work */
+  margin: 10px auto 0;
+  /* auto will center */
+  display: block;
+  /* makes auto-margin work */
   text-align: center;
 }
 
@@ -401,11 +437,12 @@
 .donate-btn:hover {
   background: #0b5ed7;
 }
+
 .donation-heading {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color:#0294d8;
+  color: #0294d8;
 }
 
 .view-more-wrapper {
@@ -485,4 +522,170 @@
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+}
+
+/* ---- Fixed Floating Banner ---- */
+.consent-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  width: calc(100% - 40px);
+  max-width: 680px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(2, 148, 216, 0.22), 0 2px 8px rgba(0, 0, 0, 0.10);
+  border-left: 5px solid #0294d8;
+  padding: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+}
+
+.consent-banner.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(30px);
+  pointer-events: none;
+}
+
+.consent-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+}
+
+.consent-banner-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+}
+
+.consent-banner-body {
+  flex: 1;
+}
+
+.consent-banner-text {
+  font-size: 13.5px;
+  color: #444;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+.consent-banner-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-start;
+}
+
+.consent-banner-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* ---- Custom Checkbox ---- */
+.consent-label,
+.consent-banner-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.consent-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.consent-checkmark {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0294d8;
+  border-radius: 5px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, border-color 0.25s;
+  position: relative;
+}
+
+.consent-input:checked+.consent-checkmark {
+  background: #0294d8;
+  border-color: #0294d8;
+}
+
+.consent-input:checked+.consent-checkmark::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.consent-text {
+  font-size: 13.5px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ---- Form inline checkbox ---- */
+.consent-checkbox-wrap {
+  background: #f0f9ff;
+  border: 1px solid #bee3f5;
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+}
+
+.consent-checkbox-wrap .consent-text {
+  font-size: 14.5px;
+  color: #2c3e50;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .consent-banner {
+    bottom: 14px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    transform: none;
+  }
+
+  .consent-banner.hide {
+    transform: translateY(30px);
+  }
+
+  .consent-banner-inner {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .consent-banner-text,
+  .consent-text {
+    font-size: 12.5px;
+  }
 }
